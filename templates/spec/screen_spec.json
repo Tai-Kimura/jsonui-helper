@@ -1,0 +1,28 @@
+{
+  "type": "screen_spec",
+  "version": "1.0",
+  "metadata": {
+    "name": "${1:ScreenName}",
+    "displayName": "${2:画面名}",
+    "description": "${3:description}",
+    "platforms": ["ios", "android", "web"],
+    "layoutFile": "${4:layout_file}"
+  },
+  "structure": {
+    "components": [],
+    "layout": {
+      "root": "${5:root_container}"
+    }
+  },
+  "stateManagement": {
+    "uiVariables": [],
+    "eventHandlers": [],
+    "displayLogic": []
+  },
+  "dataFlow": {
+    "repositories": [],
+    "apiEndpoints": []
+  },
+  "userActions": [],
+  "transitions": []
+}

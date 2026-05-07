@@ -1,0 +1,8 @@
+{
+  "type": "Button",
+  "id": "${1:button}",
+  "width": "matchParent",
+  "height": 44,
+  "text": "${2:Click}",
+  "onClick": "@{${3:onTap}}"
+}

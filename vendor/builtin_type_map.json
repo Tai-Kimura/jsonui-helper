@@ -1,0 +1,169 @@
+{
+  "String": {
+    "class": "String",
+    "defaultValue": "",
+    "web": {
+      "class": "string"
+    }
+  },
+  "Int": {
+    "class": "Int",
+    "defaultValue": 0,
+    "web": {
+      "class": "number"
+    }
+  },
+  "Double": {
+    "class": "Double",
+    "defaultValue": 0.0,
+    "web": {
+      "class": "number"
+    }
+  },
+  "Bool": {
+    "class": "Bool",
+    "defaultValue": false,
+    "android": {
+      "class": "Boolean"
+    },
+    "web": {
+      "class": "boolean"
+    }
+  },
+  "Void": {
+    "class": "Void",
+    "android": {
+      "class": "Unit"
+    },
+    "web": {
+      "class": "void"
+    }
+  },
+  "Visibility": {
+    "class": "String",
+    "defaultValue": "gone"
+  },
+  "CollectionDataSource": {
+    "class": "CollectionDataSource"
+  },
+  "callback": {
+    "class": "(() -> Void)?",
+    "android": {
+      "class": "(() -> Unit)?"
+    },
+    "web": {
+      "class": "(() => void) | undefined"
+    }
+  },
+  "callback(String)": {
+    "class": "((String) -> Void)?",
+    "android": {
+      "class": "((String) -> Unit)?"
+    },
+    "web": {
+      "class": "((value: string) => void) | undefined"
+    }
+  },
+  "callback(String,String)": {
+    "class": "((String, String) -> Void)?",
+    "android": {
+      "class": "((String, String) -> Unit)?"
+    },
+    "web": {
+      "class": "((oldValue: string, newValue: string) => void) | undefined"
+    }
+  },
+  "[$T]": {
+    "class": "[$T]",
+    "android": {
+      "class": "List<$T>"
+    },
+    "web": {
+      "class": "$T[]"
+    }
+  },
+  "$T?": {
+    "class": "$T?",
+    "android": {
+      "class": "$T?"
+    },
+    "web": {
+      "class": "$T | undefined"
+    }
+  },
+  "Array($T)": {
+    "class": "[$T]",
+    "android": {
+      "class": "List<$T>"
+    },
+    "web": {
+      "class": "$T[]"
+    }
+  },
+  "AsyncThrowingStream<$T,$E>": {
+    "class": "AsyncThrowingStream<$T, $E>",
+    "android": {
+      "class": "Flow<$T>",
+      "imports": [
+        "kotlinx.coroutines.flow.Flow"
+      ]
+    },
+    "web": {
+      "class": "AsyncIterable<$T>"
+    }
+  },
+  "[String: Any]": {
+    "class": "[String: Any]",
+    "android": {
+      "class": "Map<String, Any>"
+    },
+    "web": {
+      "class": "Record<string, any>"
+    }
+  },
+  "Map($K,$V)": {
+    "class": "[$K: $V]",
+    "android": {
+      "class": "Map<$K, $V>"
+    },
+    "web": {
+      "class": "Record<$K, $V>"
+    }
+  },
+  "Data": {
+    "class": "Data",
+    "android": {
+      "class": "ByteArray"
+    },
+    "web": {
+      "class": "Uint8Array"
+    }
+  },
+  "Bitmap": {
+    "class": "Bitmap",
+    "android": {
+      "class": "Bitmap",
+      "imports": [
+        "android.graphics.Bitmap"
+      ]
+    }
+  },
+  "URL": {
+    "class": "URL",
+    "android": {
+      "class": "String"
+    },
+    "web": {
+      "class": "string"
+    }
+  },
+  "Date": {
+    "class": "Date",
+    "android": {
+      "class": "java.time.Instant"
+    },
+    "web": {
+      "class": "Date"
+    }
+  }
+}

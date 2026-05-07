@@ -1,0 +1,20 @@
+{
+  "size_classes": [
+    "compact",
+    "medium",
+    "regular",
+    "landscape",
+    "compact-landscape",
+    "medium-landscape",
+    "regular-landscape"
+  ],
+  "priority": [
+    "regular-landscape",
+    "medium-landscape",
+    "compact-landscape",
+    "landscape",
+    "regular",
+    "medium",
+    "compact"
+  ]
+}

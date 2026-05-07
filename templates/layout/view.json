@@ -1,0 +1,8 @@
+{
+  "type": "View",
+  "id": "${1:container}",
+  "width": "${2|matchParent,wrapContent|}",
+  "height": "${3|wrapContent,matchParent|}",
+  "orientation": "${4|vertical,horizontal|}",
+  "child": []
+}

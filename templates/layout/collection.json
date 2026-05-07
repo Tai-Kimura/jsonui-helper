@@ -1,0 +1,13 @@
+{
+  "type": "Collection",
+  "id": "${1:collection}",
+  "width": "matchParent",
+  "height": "matchParent",
+  "columnSpacing": 8,
+  "lineSpacing": 8,
+  "cellClasses": ["${2:cells/cell}"],
+  "sections": [
+    { "cell": "${2:cells/cell}" }
+  ],
+  "items": "@{${3:items}}"
+}

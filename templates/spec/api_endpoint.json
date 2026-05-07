@@ -1,0 +1,8 @@
+{
+  "name": "${1:endpointName}",
+  "method": "${2|GET,POST,PUT,PATCH,DELETE|}",
+  "path": "${3:/path}",
+  "description": "${4:description}",
+  "requestSchema": {},
+  "responseSchema": {}
+}

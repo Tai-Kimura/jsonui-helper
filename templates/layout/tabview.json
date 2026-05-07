@@ -1,0 +1,9 @@
+{
+  "type": "TabView",
+  "id": "${1:tabs}",
+  "width": "matchParent",
+  "height": "matchParent",
+  "tabs": [
+    { "title": "${2:Home}", "icon": "${3:house}", "view": "${4:home}" }
+  ]
+}

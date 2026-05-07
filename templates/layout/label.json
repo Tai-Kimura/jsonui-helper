@@ -1,0 +1,9 @@
+{
+  "type": "Label",
+  "id": "${1:label}",
+  "width": "wrapContent",
+  "height": "wrapContent",
+  "text": "${2:Hello}",
+  "fontSize": ${3:16},
+  "fontColor": "${4:#000000}"
+}

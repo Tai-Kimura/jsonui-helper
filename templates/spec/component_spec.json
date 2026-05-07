@@ -1,0 +1,16 @@
+{
+  "type": "component_spec",
+  "version": "1.0",
+  "metadata": {
+    "name": "${1:ComponentName}",
+    "displayName": "${2:コンポーネント名}",
+    "description": "${3:description}",
+    "category": "${4|card,form,list,navigation,input,display,layout,feedback,other|}"
+  },
+  "props": {
+    "items": []
+  },
+  "structure": {
+    "components": []
+  }
+}

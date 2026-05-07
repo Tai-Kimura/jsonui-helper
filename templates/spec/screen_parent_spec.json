@@ -1,0 +1,12 @@
+{
+  "type": "screen_parent_spec",
+  "version": "1.0",
+  "metadata": {
+    "name": "${1:ParentScreenName}",
+    "displayName": "${2:画面名}",
+    "description": "${3:description}"
+  },
+  "subSpecs": [
+    { "file": "${4:name}/core.spec.json", "name": "Core" }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "name": "${1:Name}Repository",
+  "description": "${2:description}",
+  "methods": [
+    {
+      "name": "${3:fetch}",
+      "params": [],
+      "returnType": "${4:String}",
+      "isAsync": true,
+      "description": "${5:method description}"
+    }
+  ]
+}

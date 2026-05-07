@@ -1,0 +1,13 @@
+{
+  "name": "${1:Name}UseCase",
+  "description": "${2:description}",
+  "repositories": ["${3:Repository}"],
+  "methods": [
+    {
+      "name": "${4:execute}",
+      "params": [],
+      "returnType": "${5:Void}",
+      "isAsync": true
+    }
+  ]
+}

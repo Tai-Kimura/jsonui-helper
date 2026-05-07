@@ -1,0 +1,17 @@
+{
+  "type": "ScrollView",
+  "id": "${1:scroll}",
+  "width": "matchParent",
+  "height": "matchParent",
+  "showsVerticalScrollIndicator": true,
+  "child": [
+    {
+      "type": "View",
+      "id": "${2:scroll_content}",
+      "orientation": "vertical",
+      "width": "matchParent",
+      "height": "wrapContent",
+      "child": []
+    }
+  ]
+}

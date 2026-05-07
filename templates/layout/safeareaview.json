@@ -1,0 +1,8 @@
+{
+  "type": "SafeAreaView",
+  "id": "${1:safe_area}",
+  "width": "matchParent",
+  "height": "matchParent",
+  "background": "${2:#FFFFFF}",
+  "child": []
+}

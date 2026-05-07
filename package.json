@@ -1,0 +1,114 @@
+{
+  "name": "jsonui-helper",
+  "displayName": "JsonUI Helper",
+  "description": "Editing support for JsonUI projects (Layout JSON, Screen Spec, Component Spec, Styles, Strings).",
+  "version": "0.1.2",
+  "publisher": "taichirokimura",
+  "license": "MIT",
+  "icon": "resources/icon.png",
+  "engines": {
+    "vscode": "^1.103.0"
+  },
+  "categories": [
+    "Programming Languages",
+    "Linters",
+    "Snippets"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Tai-Kimura/jsonui-helper"
+  },
+  "bugs": {
+    "url": "https://github.com/Tai-Kimura/jsonui-helper/issues"
+  },
+  "homepage": "https://github.com/Tai-Kimura/jsonui-helper#readme",
+  "keywords": [
+    "jsonui",
+    "swiftjsonui",
+    "kotlinjsonui",
+    "reactjsonui",
+    "jui"
+  ],
+  "activationEvents": [
+    "onLanguage:json",
+    "onLanguage:jsonc",
+    "workspaceContains:jui.config.json"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "jsonValidation": [
+      {
+        "fileMatch": "*.spec.json",
+        "url": "./vendor/screen_spec_schema.json"
+      },
+      {
+        "fileMatch": "*.spec.json",
+        "url": "./vendor/component_spec_schema.json"
+      }
+    ],
+    "commands": [
+      { "command": "jsonui-helper.insertView",            "title": "JsonUI: Insert View"            },
+      { "command": "jsonui-helper.insertLabel",           "title": "JsonUI: Insert Label"           },
+      { "command": "jsonui-helper.insertButton",          "title": "JsonUI: Insert Button"          },
+      { "command": "jsonui-helper.insertTextField",       "title": "JsonUI: Insert TextField"       },
+      { "command": "jsonui-helper.insertImage",           "title": "JsonUI: Insert Image"           },
+      { "command": "jsonui-helper.insertScrollView",      "title": "JsonUI: Insert ScrollView"      },
+      { "command": "jsonui-helper.insertSafeAreaView",    "title": "JsonUI: Insert SafeAreaView"    },
+      { "command": "jsonui-helper.insertCollection",      "title": "JsonUI: Insert Collection"      },
+      { "command": "jsonui-helper.insertTabView",         "title": "JsonUI: Insert TabView"         },
+      { "command": "jsonui-helper.insertInclude",         "title": "JsonUI: Insert Include"         },
+      { "command": "jsonui-helper.insertScreenSpec",      "title": "JsonUI: Insert screen_spec"     },
+      { "command": "jsonui-helper.insertScreenSubSpec",   "title": "JsonUI: Insert screen_sub_spec" },
+      { "command": "jsonui-helper.insertScreenParentSpec","title": "JsonUI: Insert screen_parent_spec" },
+      { "command": "jsonui-helper.insertComponentSpec",   "title": "JsonUI: Insert component_spec"  },
+      { "command": "jsonui-helper.insertRepository",      "title": "JsonUI: Insert Repository"      },
+      { "command": "jsonui-helper.insertUseCase",         "title": "JsonUI: Insert UseCase"         },
+      { "command": "jsonui-helper.insertApiEndpoint",     "title": "JsonUI: Insert ApiEndpoint"     }
+    ],
+    "keybindings": [
+      { "command": "jsonui-helper.insertView",         "key": "ctrl+shift+v", "mac": "cmd+shift+v", "when": "editorTextFocus && resourceExtname == .json" },
+      { "command": "jsonui-helper.insertLabel",        "key": "ctrl+shift+l", "mac": "cmd+shift+l", "when": "editorTextFocus && resourceExtname == .json" },
+      { "command": "jsonui-helper.insertButton",       "key": "ctrl+shift+b", "mac": "cmd+shift+b", "when": "editorTextFocus && resourceExtname == .json" },
+      { "command": "jsonui-helper.insertScrollView",   "key": "ctrl+shift+s", "mac": "cmd+shift+s", "when": "editorTextFocus && resourceExtname == .json" },
+      { "command": "jsonui-helper.insertSafeAreaView", "key": "ctrl+shift+a", "mac": "cmd+shift+a", "when": "editorTextFocus && resourceExtname == .json" },
+      { "command": "jsonui-helper.insertCollection",   "key": "ctrl+shift+c", "mac": "cmd+shift+c", "when": "editorTextFocus && resourceExtname == .json" }
+    ],
+    "configuration": {
+      "title": "JsonUI Helper",
+      "properties": {
+        "jsonuiHelper.configFile":          { "type": "string",  "default": "jui.config.json", "description": "Project config filename (relative to workspace root)." },
+        "jsonuiHelper.layoutsDirectory":    { "type": "string",  "default": "", "description": "Override for layouts_directory. Empty = read from jui.config.json." },
+        "jsonuiHelper.specDirectory":       { "type": "string",  "default": "", "description": "Override for spec_directory. Empty = read from jui.config.json." },
+        "jsonuiHelper.stylesDirectory":     { "type": "string",  "default": "", "description": "Override for styles_directory. Empty = read from jui.config.json." },
+        "jsonuiHelper.stringsFile":         { "type": "string",  "default": "", "description": "Override for strings_file. Empty = read from jui.config.json." },
+        "jsonuiHelper.diagnostics.enabled": { "type": "boolean", "default": true, "description": "Enable diagnostics (unknown attributes, enum violations, unresolved references, ...)." }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "lint": "eslint src --ext ts",
+    "test": "vscode-test",
+    "sync:specs": "bash scripts/sync-specs.sh",
+    "package": "vsce package",
+    "publish": "vsce publish"
+  },
+  "dependencies": {
+    "ajv": "^8.17.1",
+    "jsonc-parser": "^3.3.1"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.10",
+    "@types/node": "^22.0.0",
+    "@types/vscode": "^1.103.0",
+    "@typescript-eslint/eslint-plugin": "^8.39.0",
+    "@typescript-eslint/parser": "^8.39.0",
+    "@vscode/test-cli": "^0.0.11",
+    "@vscode/test-electron": "^2.5.2",
+    "@vscode/vsce": "^3.2.0",
+    "eslint": "^9.32.0",
+    "typescript": "^5.9.2"
+  }
+}

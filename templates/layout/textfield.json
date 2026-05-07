@@ -1,0 +1,8 @@
+{
+  "type": "TextField",
+  "id": "${1:field}",
+  "width": "matchParent",
+  "height": 44,
+  "hint": "${2:Enter}",
+  "text": "@{${3:value}}"
+}

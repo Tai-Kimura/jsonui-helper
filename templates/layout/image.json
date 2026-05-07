@@ -1,0 +1,8 @@
+{
+  "type": "Image",
+  "id": "${1:image}",
+  "width": "matchParent",
+  "height": ${2:200},
+  "src": "${3:image_name}",
+  "contentMode": "${4|AspectFit,AspectFill,Center|}"
+}
